@@ -1,3 +1,5 @@
+#model.h5が100MBを超えていたので失敗
+
 Microsoft Windows [Version 10.0.22631.4037]
 (c) Microsoft Corporation. All rights reserved.
 
@@ -220,5 +222,78 @@ Your branch is ahead of 'origin/main' by 5 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+
+C:\Users\atsus\car_classification_app>
+
+#model.h5を100MB未満にして.gitフォルダを削除後にリトライして成功
+Microsoft Windows [Version 10.0.22631.4037]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\atsus>cd C:\Users\atsus\car_classification_app
+
+C:\Users\atsus\car_classification_app>echo "# flask_car_classification_app" >> README.md
+
+C:\Users\atsus\car_classification_app>git init
+Initialized empty Git repository in C:/Users/atsus/car_classification_app/.git/
+
+C:\Users\atsus\car_classification_app>git add README.md
+
+C:\Users\atsus\car_classification_app>git commit -m "first commit"
+[master (root-commit) cf0df05] first commit
+ 1 file changed, 6 insertions(+)
+ create mode 100644 README.md
+
+C:\Users\atsus\car_classification_app>git branch -M main
+
+C:\Users\atsus\car_classification_app>git remote add origin https://github.com/atlanta001-jp/flask_car_classification_app.git
+
+C:\Users\atsus\car_classification_app>git config --global user.email "atsushi.hamano111@gmail.com"
+
+C:\Users\atsus\car_classification_app>git config --global user.name "atlanta001-jp"
+
+C:\Users\atsus\car_classification_app>git add .
+warning: adding embedded git repository: old
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> old
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached old
+hint:
+hint: See "git help submodule" for more information.
+
+C:\Users\atsus\car_classification_app>git commit -m "first commit"
+[main ae40051] first commit
+ 10 files changed, 453 insertions(+)
+ create mode 100644 RenderDeployCommand.txt
+ create mode 100644 RenderDeployLog.txt
+ create mode 100644 car_classification.py
+ create mode 100644 kaggle.json
+ create mode 100644 model.h5
+ create mode 160000 old
+ create mode 100644 requirements.txt
+ create mode 100644 static/stylesheet.css
+ create mode 100644 templates/index.html
+ create mode 100644 uploads/.gitkeep
+
+C:\Users\atsus\car_classification_app>git push -u origin main
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (17/17), 86.01 MiB | 2.45 MiB/s, done.
+Total 17 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote: warning: See https://gh.io/lfs for more information.
+remote: warning: File model.h5 is 92.24 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/atlanta001-jp/flask_car_classification_app.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
 
 C:\Users\atsus\car_classification_app>
