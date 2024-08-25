@@ -29,16 +29,10 @@ git add .
 git commit -m "first commit"
 git push -u origin main
 
+2回目以降
+git add .
+git commit -m "2nd commit change port" 
+git push origin main
 
-最後はエラーが出る
-C:\Users\atsus\car_classification_app>git push -u origin main
-Enumerating objects: 35, done.
-Counting objects: 100% (35/35), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (23/23), done.
-error: RPC failed; HTTP 400 curl 18 HTTP/2 stream 7 was reset
-send-pack: unexpected disconnect while reading sideband packet
-Writing objects: 100% (26/26), 209.62 MiB | 1.90 MiB/s, done.
-Total 26 (delta 8), reused 0 (delta 0), pack-reused 0
-fatal: the remote end hung up unexpectedly
-Everything up-to-date
+git add .
+git commit -m "3rd commit restore port" 
