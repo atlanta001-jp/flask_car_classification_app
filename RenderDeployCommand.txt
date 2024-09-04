@@ -34,5 +34,11 @@ git add .
 git commit -m "2nd commit change port" 
 git push origin main
 
-git add .
 git commit -m "3rd commit restore port" 
+git commit -m "4rd commit change tensorflow ver" 
+git commit -m "5th commit change color_mode" 
+git commit -m "6th commit modify img size" 
+git commit -m "7th commit exclude display image" 
+git commit -m "8th commit change stylesheet" 
+git commit -m "9th commit modify display model" 
+
