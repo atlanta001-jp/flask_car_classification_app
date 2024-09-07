@@ -41,4 +41,6 @@ git commit -m "6th commit modify img size"
 git commit -m "7th commit exclude display image" 
 git commit -m "8th commit change stylesheet" 
 git commit -m "9th commit modify display model" 
-
+git commit -m "10th commit modify model using filtered images" 
+git commit -m "11th commit html"
+git commit -m "12th commit modify image size"

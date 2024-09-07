@@ -8,7 +8,7 @@ import numpy as np
 
 
 classes = ["Porsche 718 Boxster","Volkswagen Polo VI","Volkswagen ID.5","Audi RS e-tron GT","Lamborghini Huracan Tecnica"]
-image_size = 120
+image_size = 50 #modify 2024/9/7
 
 UPLOAD_FOLDER = "uploads"
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
