@@ -18,7 +18,8 @@ app = Flask(__name__)
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-model = load_model('./model.h5', compile=False)#学習済みモデルをロード
+#学習済みモデルをロード
+model = load_model('./model.h5', compile=False)
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -45,8 +46,8 @@ def upload_file():
             predicted = result.argmax()
             pred_answer = "これは " + classes[predicted] + " です"
             #予測値とアップロードした画像を表示
-            return render_template("index.html",answer=pred_answer) 
-            # return render_template("index.html",answer=pred_answer, images=filepath) 8/25原因切り分けのため一旦除外
+            # return render_template("index.html",answer=pred_answer) 
+            return render_template("index.html",answer=pred_answer, images=filepath) #8/25原因切り分けのため一旦除外
 
     return render_template("index.html",answer="")
 
