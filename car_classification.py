@@ -10,7 +10,7 @@ import numpy as np
 classes = ["Porsche 718 Boxster","Volkswagen Polo VI","Volkswagen ID.5","Audi RS e-tron GT","Lamborghini Huracan Tecnica"]
 image_size = 50 #modify 2024/9/7
 
-UPLOAD_FOLDER = "uploads"
+UPLOAD_FOLDER = "static" #modify 2024/9/8 uploadsからstaticへ変更
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
